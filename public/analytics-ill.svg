@@ -1,0 +1,33 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(50, 50)">
+    <!-- Grid lines -->
+    <line x1="0" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.1)" />
+    <line x1="0" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.1)" />
+    <line x1="0" y1="100" x2="300" y2="100" stroke="rgba(255,255,255,0.1)" />
+    <line x1="0" y1="150" x2="300" y2="150" stroke="rgba(255,255,255,0.1)" />
+    <line x1="0" y1="200" x2="300" y2="200" stroke="rgba(255,255,255,0.2)" />
+
+    <!-- Line Chart -->
+    <path d="M0,150 Q50,50 100,100 T200,80 T300,20" fill="url(#chartGrad)" stroke="#d946ef" stroke-width="3">
+       <animate attributeName="d" values="M0,150 Q50,150 100,150 T200,150 T300,150; M0,150 Q50,50 100,100 T200,80 T300,20" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    </path>
+
+    <!-- Data Points -->
+    <circle cx="100" cy="100" r="4" fill="#06b6d4" stroke="white" stroke-width="2">
+       <animate attributeName="cy" values="150;100" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    </circle>
+    <circle cx="200" cy="80" r="4" fill="#06b6d4" stroke="white" stroke-width="2">
+       <animate attributeName="cy" values="150;80" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    </circle>
+    <circle cx="300" cy="20" r="4" fill="#06b6d4" stroke="white" stroke-width="2">
+       <animate attributeName="cy" values="150;20" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    </circle>
+  </g>
+</svg>
